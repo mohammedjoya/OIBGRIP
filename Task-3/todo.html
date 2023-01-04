@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">To-Do List</h1><br>
+    </header>
+    <h6 style="text-align: center;">Made By Joya Muskan</h6>
+    <div class="todo-container">
+        <div class="input">
+            <input type="text" class="form-control" placeholder="New Task" name="">
+            <div class="add"><i class="material-icons">add</i></div>
+        </div>
+
+        <ul class="todo-list">
+            
+        </ul>
+    </div>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function(){
+            var count = 0;
+            $(".add").click(function(){
+                var inputval = $(".form-control").val();
+                if (inputval != ''){
+                    count ++;
+                    $(".todo-list").append('<li><div class="left-cont"><input type="checkbox" id="check-'+count+'" name=""><label for="check-'+count+'"></label><span>'+inputval+'</span></div><span class="remove"><i class="material-icons">delete</i></span></li>')
+                }
+                $(".form-control").val('');
+            })
+
+            $(document).on('change','input[type="checkbox"]',function(){
+                if($(this).is(':checked')){
+                    $(this).closest("li").children(".remove").addClass("active");
+                }else{
+                    $(this).closest("li").children(".remove").removeClass("active");
+                }
+            })
+
+            $(document).on('click','.remove',function(){
+                $(this).parent().remove();
+            })
+        })
+    </script>
+</body>
+
+</html>

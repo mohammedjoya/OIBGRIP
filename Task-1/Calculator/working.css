@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    margin:auto ;
+}
+.total1{
+    border: 10px, solid #ccc;
+    border-radius: 20px;
+    border-width: 60px;
+    background-color: gray;
+}
+.s{
+    border-width: 20px;
+}
+
+
+
+.total{
+    padding: 20px;
+    margin-top: 20px;
+    margin-left:auto ;
+    margin-right: auto;
+    margin-bottom: 20px;
+    
+    width: fit-content;
+    
+    
+}
+.table{
+        margin-left: auto;
+        margin-right: auto;
+        background-color: aqua;
+        width: auto;
+        border-width: 15px;
+}
+input{
+    margin-left: auto;
+    margin-right:auto;
+    width: 400px;;
+    background-color:black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+button{
+    width:55px;
+    height:55px;
+    background-color: bisque;
+}
